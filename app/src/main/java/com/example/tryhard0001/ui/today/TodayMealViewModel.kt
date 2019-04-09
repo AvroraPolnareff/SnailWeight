@@ -1,6 +1,6 @@
 package com.example.tryhard0001.ui.today
 
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel
 import com.example.tryhard0001.data.db.model.Meal
 import com.example.tryhard0001.data.repository.MealRepository
 import com.example.tryhard0001.internal.lazyDeferred
@@ -12,6 +12,7 @@ class TodayMealViewModel(
     val todayMealEntries by lazyDeferred {
         mealRepository.getTodayMeal()
     }
-    fun insertMeal(meal: Meal) = lazyDeferred { mealRepository.insert(meal)}
+    suspend fun insertMeal(meal: Meal) = mealRepository.insert(meal)
     fun deleteMeal(meal: Meal) = lazyDeferred { mealRepository.delete(meal)}
+
 }

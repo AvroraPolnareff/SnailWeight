@@ -7,7 +7,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
 
-class ScopedFragment: Fragment(), CoroutineScope {
+open class ScopedFragment: Fragment(), CoroutineScope {
     private lateinit var job: Job
 
     override val coroutineContext: CoroutineContext

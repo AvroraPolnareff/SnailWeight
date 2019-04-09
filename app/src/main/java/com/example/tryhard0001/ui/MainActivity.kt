@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.example.tryhard0001.R
+import com.example.tryhard0001.ui.today.TodayMealFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -18,6 +19,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        nav_view.setNavigationItemSelectedListener(this)
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        val fragment = TodayMealFragment()
+
+        fragmentTransaction
+            .add(R.id.fragment_replace, fragment)
+            .commit()
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

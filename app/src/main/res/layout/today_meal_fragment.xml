@@ -6,9 +6,9 @@
         android:layout_height="match_parent"
         tools:context=".ui.today.TodayMealFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Hello"/>
+            android:id="@+id/today_recycler_view"/>
 
 </FrameLayout>

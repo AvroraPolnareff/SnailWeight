@@ -7,4 +7,15 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_meal_name">Name</string>
+    <string name="recipe_mode">Recipe mode</string>
+    <string name="edit_meal_grams">grams</string>
+    <string name="calories_per_hundred">Kcal/100g</string>
+    <string name="calories">Calories</string>
+    <string name="make_unique">make unique</string>
+    <string name="total">Total:</string>
+    <string name="add">add</string>
+    <string name="save">save</string>
 </resources>
